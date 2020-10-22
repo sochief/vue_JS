@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My first Vue app</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="app">
+        <h2 v-html="link"></h2>
+    </div>
+    <!-- Пользоваться аккуратно и не использовать лишний раз-->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                link: '<a href="https://google.com">Google</a>'
+            }
+        })
+    </script>
+</body>
+
+</html>

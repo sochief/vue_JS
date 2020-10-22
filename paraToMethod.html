@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My first Vue app</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="app">
+        <h2>{{title}} = {{counter}}</h2>
+        <button v-on:click="riseCount(5,'Increased on 5',$event)">Increase on 5</button>
+        <button v-on:click="riseCount(10,'Increased on 10',$event)">Increase on 10</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                counter: 0,
+                title: "Counter"
+            },
+            methods: {
+                riseCount: function (number, str, event) {
+                    this.counter += number
+                    this.title = str
+
+                    if (number == 5) {
+                        event.target.style.color = 'blue'
+                        // blue
+                    } else if (number == 10) {
+                        event.target.style.color = 'red'
+                        //red
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
