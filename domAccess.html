@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+<div id="app">
+    <h2 ref="heading">{{ title }}</h2>
+    <button @click="updateFirstTitle">Update Title</button>
+
+    <hr ref="headline">
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            title: 'Hello I am vue!',
+        },
+        methods:{
+            updateFirstTitle(){
+                this.title = 'New title'
+                this.$refs.heading.style.color = 'red'
+                this.$refs.headline
+                console.log(this.$refs) // get all the references, in this example we get heading from h2
+                console.log(document.querySelector('hr'))
+            }
+        }
+    })
+</script>
+</body>
+
+</html>
