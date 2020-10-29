@@ -9,7 +9,7 @@
 <body>
 <div id="app">
     <ul>
-        <li v-for="person in people">{{person}}</li>
+        <li v-for="(person,index) in people">{{index + 1}. {{person.name}} - <b>{{person.age}}</b></li>
     </ul>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -17,11 +17,13 @@
     new Vue({
         el: '#app',
         data: {
-            people : ['Mike','Josh','Trinity']
+            people : [
+            {name: 'Vlad', age: 20},
+            {name: 'Max', age: 25},
+            {name: 'Elena', age: 30},]
         },
     })
 </script>
 </body>
 
 </html>
-<!-- file:///home/chief/Downloads/[WebForMySelf]%20%D0%A4%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%20Vue.js/videokurs/part1/block2/block2_14.html -->
