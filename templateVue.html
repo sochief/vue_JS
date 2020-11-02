@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+<div id="app"></div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var vue = new Vue({
+        data: {
+            title: 'Hello Vue!'
+        },
+        template: '<h1>{{ title }}</h1>'
+    });
+    vue.$mount('#app')
+</script>
+</body>
+
+</html>
